@@ -1,0 +1,21 @@
+.navbar {
+  height: 3rem;
+  border: 5px solid black;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  gap: 0.7rem;
+  position: fixed;
+  background-color: white;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+
+.element {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 4px solid black;
+}

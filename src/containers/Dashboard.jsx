@@ -19,7 +19,7 @@ const Dashboard = () => {
     <div
       style={{
         overflowY: showAddCreation ? "scroll" : null,
-        maxHeight: showAddCreation ? "93vh" : null,
+        maxHeight: showAddCreation ? "80vh" : null,
       }}
       className="dashboard"
     >
@@ -46,7 +46,7 @@ const Dashboard = () => {
           <p>title/ subtitle:</p>
           <input
             type="text"
-            placeholder="search across title and subtitle"
+            placeholder="search across title & subtitle"
             className="searchArea"
             onChange={(e) =>
               dispatch({ type: "addSearchText", payload: e.target.value })

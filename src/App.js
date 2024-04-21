@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchColors } from "./redux/action";
 import Drawer from "./containers/Drawer";
+import Navbar from "./components/Navbar";
 
 function App() {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <main>
         <Dashboard />
         <Drawer />

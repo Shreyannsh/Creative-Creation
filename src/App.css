@@ -3,7 +3,7 @@
 .App {
   text-align: center;
   border: 5px solid black;
-  /* height: 100%; */
+  /* min-height: 90vh; */
 }
 
 :root {
@@ -13,5 +13,6 @@
 }
 
 main {
+  /* margin-top: 2rem; */
   display: flex;
 }
