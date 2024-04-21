@@ -3,7 +3,7 @@ import "../styles/Dashboard.css";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import ProgressBar from "../components/ProgressBar";
+import ProgressBar from "../components/progressBar";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
