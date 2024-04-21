@@ -11,6 +11,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchColors());
+    dispatch({ type: "serachFunction" });
   }, []);
 
   return (

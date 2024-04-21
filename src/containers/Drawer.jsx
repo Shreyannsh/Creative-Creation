@@ -21,6 +21,7 @@ const Drawer = () => {
   const doneFunc = () => {
     dispatch({ type: "toggleShowAddCreation" });
     dispatch({ type: "addCreation", payload: creation });
+    dispatch({ type: "serachFunction" });
     setCreation({
       title: "",
       subtitle: "",

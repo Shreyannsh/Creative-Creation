@@ -1,14 +1,20 @@
 import { useDispatch, useSelector } from "react-redux";
 import "../styles/Dashboard.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProgressBar from "../components/progressBar";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
   const colorList = useSelector((state) => state.colorList);
-  const creativeList = useSelector((state) => state.creativeList);
+  const filteredList = useSelector((state) => state.filteredList);
   const showAddCreation = useSelector((state) => state.showAddCreation);
+  const filter = useSelector((state) => state.filter);
   const [selectedColor, setSelectedColor] = useState();
+
+  useEffect(() => {
+    console.log("kkkk");
+    dispatch({ type: "serachFunction" });
+  }, [filter]);
 
   return (
     <div
@@ -32,15 +38,11 @@ const Dashboard = () => {
                     ? "colorOptionSelected"
                     : "colorOption"
                 }
-                onClick={() => setSelectedColor(color)}
+                onClick={() =>
+                  dispatch({ type: "addFilterColor", payload: color })
+                }
               ></div>
             ))}
-
-            {/* <div className="colorOption"></div>
-            <div className="colorOption"></div>
-            <div className="colorOption"></div>
-            <div className="colorOption"></div>
-            <div className="colorOption"></div> */}
           </div>
         </div>
         <div>
@@ -49,10 +51,13 @@ const Dashboard = () => {
             type="text"
             placeholder="search across title and subtitle"
             className="searchArea"
+            onChange={(e) =>
+              dispatch({ type: "addSearchText", payload: e.target.value })
+            }
           />
         </div>
       </div>
-      <ProgressBar value={creativeList.length} />
+      <ProgressBar value={filteredList.length} />
       <div>
         <button
           onClick={() => dispatch({ type: "toggleShowAddCreation" })}
@@ -62,7 +67,7 @@ const Dashboard = () => {
         </button>
 
         <div className="creationList">
-          {creativeList.map((option) => (
+          {filteredList.map((option) => (
             <div
               className="creationDiv"
               style={{ backgroundColor: option.color }}
