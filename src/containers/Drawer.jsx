@@ -16,7 +16,6 @@ const Drawer = () => {
   });
 
   const isEmpty = Object.values(creation).includes("");
-  console.log(isEmpty);
 
   const doneFunc = () => {
     dispatch({ type: "toggleShowAddCreation" });

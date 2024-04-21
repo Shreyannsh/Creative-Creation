@@ -5,7 +5,6 @@
   padding-left: 1rem;
   width: 65%;
   min-height: 83vh;
-  /* height: 100%; */
 }
 
 .title {
@@ -73,11 +72,11 @@ button {
   content: "";
   position: absolute;
   border-radius: 50%;
-  top: -4px; /* Adjust to position the pseudo-element border */
-  bottom: -4px; /* Adjust to position the pseudo-element border */
-  left: -4px; /* Adjust to position the pseudo-element border */
-  right: -4px; /* Adjust to position the pseudo-element border */
-  border: 2px solid black; /* Adjust border color and style as needed */
+  top: -4px;
+  bottom: -4px;
+  left: -4px;
+  right: -4px;
+  border: 2px solid black;
 }
 
 .creationDiv {
@@ -106,20 +105,20 @@ h3 {
 /* scrollbar styling  */
 
 .dashboard::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
+  width: 8px;
 }
 
 .dashboard::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Color of the scrollbar track */
+  background: #f1f1f1;
   border-radius: 5px;
   border: 1px solid black;
 }
 
 .dashboard::-webkit-scrollbar-thumb {
-  background: black; /* Color of the scrollbar thumb */
+  background: black;
   border-radius: 5px;
 }
 
 .dashboard::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Color of the scrollbar thumb on hover */
+  background: #555;
 }

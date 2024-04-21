@@ -4,14 +4,14 @@
   gap: 20px;
 }
 .progress-bar-container {
-  width: 500px; /* Adjust the width of the progress bar */
-  height: 12px; /* Adjust the height of the progress bar */
-  border: 1px solid black; /* Background color of the progress bar */
-  border-radius: 5px; /* Border radius to make it rounded */
+  width: 500px;
+  height: 12px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .progress-bar-fill {
-  height: 100%; /* Fill the entire height of the progress bar */
-  background-color: black; /* Color of the filled portion */
-  border-radius: 5px; /* Border radius to match the container */
+  height: 100%;
+  background-color: black;
+  border-radius: 5px;
 }

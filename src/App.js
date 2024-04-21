@@ -1,11 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Dashboard from "./containers/Dashboard";
+
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchColors } from "./redux/action";
+
 import Drawer from "./containers/Drawer";
 import Navbar from "./components/Navbar";
+import Dashboard from "./containers/Dashboard";
 
 function App() {
   const dispatch = useDispatch();

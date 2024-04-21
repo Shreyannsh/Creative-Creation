@@ -1,18 +1,19 @@
-import { useDispatch, useSelector } from "react-redux";
 import "../styles/Dashboard.css";
-import { useEffect, useState } from "react";
-import ProgressBar from "../components/progressBar";
+
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import ProgressBar from "../components/ProgressBar";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
+  const filter = useSelector((state) => state.filter);
+  const isLoading = useSelector((state) => state.isLoading);
   const colorList = useSelector((state) => state.colorList);
   const filteredList = useSelector((state) => state.filteredList);
   const showAddCreation = useSelector((state) => state.showAddCreation);
-  const filter = useSelector((state) => state.filter);
-  const isLoading = useSelector((state) => state.isLoading);
 
   useEffect(() => {
-    console.log("kkkk");
     dispatch({ type: "serachFunction" });
   }, [filter]);
 
