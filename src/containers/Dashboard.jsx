@@ -26,7 +26,7 @@ const Dashboard = () => {
       className="dashboard"
     >
       <p className="title">Filter By</p>
-      <div className="filterSection">
+      <section className="filterSection">
         <div>
           <p>color:</p>
           {isLoading ? (
@@ -72,28 +72,27 @@ const Dashboard = () => {
             }
           />
         </div>
-      </div>
+      </section>
       <ProgressBar value={filteredList.length} />
-      <div>
+      <section>
         <button
           onClick={() => dispatch({ type: "toggleShowAddCreation" })}
           disabled={showAddCreation || filteredList.length === 5 ? true : false}
         >
           + Add Creative
         </button>
-
-        <div className="creationList">
-          {filteredList.map((option) => (
-            <div
-              className="creationDiv"
-              style={{ backgroundColor: option.color }}
-            >
-              <h1>{option.title}</h1>
-              <h3>{option.subtitle}</h3>
-            </div>
-          ))}
-        </div>
-      </div>
+      </section>
+      <section className="creationList">
+        {filteredList.map((option) => (
+          <div
+            className="creationDiv"
+            style={{ backgroundColor: option.color }}
+          >
+            <h1>{option.title}</h1>
+            <h3>{option.subtitle}</h3>
+          </div>
+        ))}
+      </section>
     </div>
   );
 };
