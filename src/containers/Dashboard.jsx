@@ -9,7 +9,6 @@ const Dashboard = () => {
   const filteredList = useSelector((state) => state.filteredList);
   const showAddCreation = useSelector((state) => state.showAddCreation);
   const filter = useSelector((state) => state.filter);
-  const [selectedColor, setSelectedColor] = useState();
 
   useEffect(() => {
     console.log("kkkk");
@@ -34,9 +33,7 @@ const Dashboard = () => {
                 key={color}
                 style={{ backgroundColor: color }}
                 className={
-                  selectedColor === color
-                    ? "colorOptionSelected"
-                    : "colorOption"
+                  filter.color === color ? "colorOptionSelected" : "colorOption"
                 }
                 onClick={() =>
                   dispatch({ type: "addFilterColor", payload: color })
