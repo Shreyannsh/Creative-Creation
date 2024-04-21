@@ -3,9 +3,9 @@
   text-align: left;
   padding-left: 1rem;
   width: 65%;
-  /* display: flex;
-  flex-direction: column;
-  gap: 0rem; */
+  /* overflow-y: scroll; */
+  min-height: 93vh;
+  height: 100%;
 }
 
 .title {
@@ -77,4 +77,42 @@ button {
   left: -4px; /* Adjust to position the pseudo-element border */
   right: -4px; /* Adjust to position the pseudo-element border */
   border: 2px solid black; /* Adjust border color and style as needed */
+}
+
+.creationDiv {
+  padding: 20px 20px;
+  height: 5rem;
+  width: 20rem;
+  margin: 1rem 0rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.creationDiv h1,
+h3 {
+  margin: 0px;
+}
+
+.creationList {
+  margin-top: 5rem;
+}
+
+/* scrollbar styling  */
+
+.dashboard::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.dashboard::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.dashboard::-webkit-scrollbar-thumb {
+  background: black; /* Color of the scrollbar thumb */
+  border-radius: 5px;
+}
+
+.dashboard::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
 }

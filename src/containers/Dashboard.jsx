@@ -11,7 +11,13 @@ const Dashboard = () => {
   const [selectedColor, setSelectedColor] = useState();
 
   return (
-    <div className="dashboard">
+    <div
+      style={{
+        overflowY: showAddCreation ? "scroll" : null,
+        maxHeight: showAddCreation ? "93vh" : null,
+      }}
+      className="dashboard"
+    >
       <p className="title">Filter By</p>
       <div className="filterSection">
         <div>
@@ -54,6 +60,18 @@ const Dashboard = () => {
         >
           + Add Creative
         </button>
+
+        <div className="creationList">
+          {creativeList.map((option) => (
+            <div
+              className="creationDiv"
+              style={{ backgroundColor: option.color }}
+            >
+              <h1>{option.title}</h1>
+              <h3>{option.subtitle}</h3>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
