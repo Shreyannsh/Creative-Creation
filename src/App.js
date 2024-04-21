@@ -4,6 +4,7 @@ import Dashboard from "./containers/Dashboard";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchColors } from "./redux/action";
+import Drawer from "./containers/Drawer";
 
 function App() {
   const dispatch = useDispatch();
@@ -14,7 +15,10 @@ function App() {
 
   return (
     <div className="App">
-      <Dashboard />
+      <main>
+        <Dashboard />
+        <Drawer />
+      </main>
     </div>
   );
 }

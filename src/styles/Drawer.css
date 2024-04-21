@@ -1,0 +1,46 @@
+.drawer {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-left: 5px solid black;
+  height: 100vh;
+  width: 35%;
+  padding-left: 45px;
+}
+
+.drawer header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.closeBtn {
+  font-size: 2rem;
+}
+
+.inputSection {
+  text-align: left;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputSection input {
+  width: 20rem;
+  height: 1.3rem;
+  padding-left: 10px;
+  /* margin-top: 1rem; */
+}
+
+.drawer p {
+  margin: 0px;
+}
+
+.doneBtn {
+  margin-top: 3rem;
+  padding: 7px 0px;
+  width: 10rem;
+}

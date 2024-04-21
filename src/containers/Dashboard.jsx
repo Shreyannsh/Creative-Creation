@@ -1,12 +1,13 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "../styles/Dashboard.css";
 import { useState } from "react";
 import ProgressBar from "../components/progressBar";
 
 const Dashboard = () => {
+  const dispatch = useDispatch();
   const colorList = useSelector((state) => state.colorList);
   const creativeList = useSelector((state) => state.creativeList);
-
+  const showAddCreation = useSelector((state) => state.showAddCreation);
   const [selectedColor, setSelectedColor] = useState();
 
   return (
@@ -47,7 +48,12 @@ const Dashboard = () => {
       </div>
       <ProgressBar value={creativeList.length} />
       <div>
-        <button>+ Add Creative</button>
+        <button
+          onClick={() => dispatch({ type: "toggleShowAddCreation" })}
+          disabled={showAddCreation ? true : false}
+        >
+          + Add Creative
+        </button>
       </div>
     </div>
   );
