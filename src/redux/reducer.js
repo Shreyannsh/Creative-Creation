@@ -2,6 +2,7 @@ const initialState = {
   colorList: [],
   creativeList: [],
   filteredList: [],
+  isLoading: false,
   showAddCreation: false,
   filter: {
     color: "",
@@ -31,6 +32,9 @@ export const creativeReducer = (state = initialState, action) => {
 
     case "toggleShowAddCreation":
       return { ...state, showAddCreation: !state.showAddCreation };
+
+    case "setIsLoading":
+      return { ...state, isLoading: !state.isLoading };
 
     case "serachFunction":
       let data = [...state.creativeList];

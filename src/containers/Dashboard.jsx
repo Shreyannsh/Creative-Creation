@@ -9,6 +9,7 @@ const Dashboard = () => {
   const filteredList = useSelector((state) => state.filteredList);
   const showAddCreation = useSelector((state) => state.showAddCreation);
   const filter = useSelector((state) => state.filter);
+  const isLoading = useSelector((state) => state.isLoading);
 
   useEffect(() => {
     console.log("kkkk");
@@ -27,20 +28,37 @@ const Dashboard = () => {
       <div className="filterSection">
         <div>
           <p>color:</p>
-          <div className="colorList">
-            {colorList.map((color) => (
+          {isLoading ? (
+            <img
+              className="loader"
+              src="https://i.gifer.com/ZKZg.gif"
+              alt="loading"
+            />
+          ) : (
+            <div className="colorList">
+              {colorList.map((color) => (
+                <div
+                  key={color}
+                  style={{ backgroundColor: color }}
+                  className={
+                    filter.color === color
+                      ? "colorOptionSelected"
+                      : "colorOption"
+                  }
+                  onClick={() =>
+                    dispatch({ type: "addFilterColor", payload: color })
+                  }
+                ></div>
+              ))}
               <div
-                key={color}
-                style={{ backgroundColor: color }}
-                className={
-                  filter.color === color ? "colorOptionSelected" : "colorOption"
-                }
+                key="123"
+                className="colorOption"
                 onClick={() =>
-                  dispatch({ type: "addFilterColor", payload: color })
+                  dispatch({ type: "addFilterColor", payload: "" })
                 }
               ></div>
-            ))}
-          </div>
+            </div>
+          )}
         </div>
         <div>
           <p>title/ subtitle:</p>
@@ -58,7 +76,7 @@ const Dashboard = () => {
       <div>
         <button
           onClick={() => dispatch({ type: "toggleShowAddCreation" })}
-          disabled={showAddCreation ? true : false}
+          disabled={showAddCreation || filteredList.length === 5 ? true : false}
         >
           + Add Creative
         </button>

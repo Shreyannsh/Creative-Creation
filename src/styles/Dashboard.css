@@ -47,6 +47,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  width: 10rem;
 }
 
 .colorOption {
@@ -94,6 +95,12 @@ h3 {
 
 .creationList {
   margin-top: 5rem;
+}
+
+.loader {
+  margin-left: 3rem;
+  width: 30px;
+  height: 30px;
 }
 
 /* scrollbar styling  */

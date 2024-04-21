@@ -8,7 +8,7 @@ const ProgressBar = ({ value }) => {
       <div className="progress-bar-container">
         <div className="progress-bar-fill" style={{ width: fillWidth }}></div>
       </div>
-      <span>0 / 5 Creatives</span>
+      <span>{value} / 5 Creatives</span>
     </div>
   );
 };
